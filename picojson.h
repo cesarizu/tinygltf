@@ -891,7 +891,7 @@ template <typename Context, typename Iter> inline bool _parse(Context &ctx, inpu
       if (num_str.empty()) {
         return false;
       }
-#ifdef PICOJSON_USE_INT64
+#ifdef PICOJSON_USE_INT64_ERROR
       {
         errno = 0;
         intmax_t ival = strtoimax(num_str.c_str(), &endp, 10);
